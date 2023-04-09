@@ -22,7 +22,7 @@ import type QuillEditor from '../editor/quill-editor';
 import { ToolbarProvider } from './components/toolbar-context';
 import { SelectionBar } from './components/selection-bar';
 import { ToolSet } from './components/tool-set';
-import { ToolbarSeparator } from './components/toolbar-separator';
+import { ToolbarSeperator as ToolbarSeparator } from './components/toolbar-separator';
 import type { FormatChangeData } from '../constants/editor-event';
 
 const WIDTH = Dimensions.get('window').width;
