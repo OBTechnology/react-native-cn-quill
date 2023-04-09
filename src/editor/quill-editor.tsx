@@ -166,7 +166,7 @@ export default class QuillEditor extends React.Component<
   private postAwait<T>(data: any): Promise<T> {
     const key = this.getKey();
     let resolveFn: (value: T | PromiseLike<T>) => void;
-    resolveFn = () => {};
+    resolveFn = () => { };
     const promise = new Promise<T>((resolve) => {
       resolveFn = resolve;
     });
@@ -366,6 +366,10 @@ export default class QuillEditor extends React.Component<
     });
   };
 
+  getWebview = () => {
+    return this._webview.current;
+  };
+
   on = (event: EditorEventType, handler: EditorEventHandler) => {
     this._handlers.push({ event, handler });
   };
@@ -441,6 +445,7 @@ export default class QuillEditor extends React.Component<
       );
     }
   }
+
 }
 
 let styles = StyleSheet.create({
